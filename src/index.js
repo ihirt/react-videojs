@@ -17,8 +17,9 @@ const videoJsOptions = {
       src: "http://techslides.com/demos/sample-videos/small.mp4",
       type: "video/mp4",
       */
-      src: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      //type: "application/x-mpegURL",
+      //src: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+      src: "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8",
+      type: "application/x-mpegURL",
     },
   ],
 };
