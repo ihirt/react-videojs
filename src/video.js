@@ -2,13 +2,14 @@
 import React from "react";
 import videojs from "video.js";
 
-export default class VideoPlayer extends React.Component {
+export default class Videojs extends React.Component {
   componentDidMount() {
     // instantiate video.js
     this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
       console.log("onPlayerReady", this);
     });
 
+    console.log("node", this.videoNode, this);
     if (this.videoNode) {
       this.videoNode.setAttribute("webkit-playsinline", true);
       this.videoNode.setAttribute("playsinline", true);
@@ -26,9 +27,10 @@ export default class VideoPlayer extends React.Component {
   // so videojs won't create additional wrapper in the DOM
   // see https://github.com/videojs/video.js/pull/3856
   render() {
+    console.log("render");
     return (
       <div data-vjs-player>
-        <video ref={node => (this.videoNode = node)} className="video-js" />
+        <video ref={(node) => (this.videoNode = node)} className="video-js" />
       </div>
     );
   }
